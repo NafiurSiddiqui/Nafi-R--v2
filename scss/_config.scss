@@ -1,0 +1,47 @@
+$primary-color: #020202;
+$secondary-color: #2fd5ff;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin transition-ease {
+  transition: all 0.5s ease-in-out;
+}
+
+@function set-text-color($color) { 
+
+  @if (lightness($color) > 40%) {
+    @return #000;
+  } @else {
+    @return #fff;
+  }
+}
+
+//DirectionJC = for justify-content, directionAT = for align-items, flexType = row/ column
+
+@mixin flex($directionJC, $directionAT, $flexType){
+  display: flex;
+  justify-content: $directionJC;
+  align-items: $directionAT;
+  flex-direction: $flexType;
+
+}
+
+@mixin media-md {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+@mixin media-lg {
+  @media screen and (min-width: 1024px) {
+    @content;
+  }
+}
+@mixin media-xl {
+  @media screen and (min-width: 1600px) {
+    @content;
+  }
+}

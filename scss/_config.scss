@@ -1,5 +1,13 @@
 $primary-color: #020202;
-$secondary-color: #2fd5ff;
+// $secondary-color: #2fd5ff;
+// $secondary-color: #ced065;
+// $secondary-color: #b0d065;
+// $secondary-color: #65d07b;
+// $secondary-color: #65d093;
+// $secondary-color: #b677fa;
+// $secondary-color: #fa77fa;
+// $secondary-color: #fa7793;
+$secondary-color: #fa777d;
 
 * {
   box-sizing: border-box;
@@ -14,9 +22,9 @@ $secondary-color: #2fd5ff;
 @function set-text-color($color) { 
 
   @if (lightness($color) > 40%) {
-    @return #000;
+    @return rgb(27, 26, 26);
   } @else {
-    @return #fff;
+    @return rgb(235, 234, 234);
   }
 }
 

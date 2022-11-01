@@ -7,7 +7,6 @@
     width: 60vw;
     margin: 2rem auto 0 auto;
     display: grid;
-    grid-template-columns: 1fr;
     grid-gap: 2rem;
   }
 
@@ -16,9 +15,11 @@
     border-bottom: 5px solid $secondary-color;
     overflow: hidden;
     cursor: pointer;
-
+    border-radius:0.2rem;
     img {
       width: 100%;
+      opacity: 0.8;
+      height: 98%;
     }
 
     &::after {
@@ -29,7 +30,7 @@
       height: 100%;
       width: 100%;
       background: $secondary-color;
-      opacity: 0;
+      opacity: 1;
       @include transition-ease;
     }
 
@@ -58,11 +59,25 @@
 
   &__btn {
     opacity: 0;
+    font-size: 2.8rem;
     color: set-text-color($secondary-color);
     @include transition-ease;
+    @include flex(center, center,row);   
+    i{
+     
+      width: 5rem;
+      height: 5rem;
+     @include flex(center, center,row);   
+      border-radius: 50%;
 
+      &:hover{
+        box-shadow: 1px 2px 4px #834358, -1px -1px 4px rgb(213, 174, 174);
+      }
+    }
+    
     &:hover {
       color: set-text-color(set-text-color($secondary-color));
+     
     }
   }
 

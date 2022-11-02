@@ -38,6 +38,17 @@ $secondary-color: #fa777d;
 
 }
 
+@mixin media-small-md{
+  @media screen and (min-width: 450px) {
+    @content;
+  }
+}
+
+@mixin media-small-lg{
+  @media screen and (min-width: 600px) {
+    @content;
+  }
+}
 @mixin media-md {
   @media screen and (min-width: 768px) {
     @content;
@@ -53,3 +64,10 @@ $secondary-color: #fa777d;
     @content;
   }
 }
+
+@mixin media-xxl {
+  @media screen and (min-width: 2200px) {
+    @content;
+  }
+}
+

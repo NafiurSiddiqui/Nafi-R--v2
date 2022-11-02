@@ -28,3 +28,39 @@
    
   }
 
+
+@include media-xl{
+  .home__name{
+    padding-top: 30vh;
+
+    &-name{
+      font-size: 6.2rem;
+
+      &__last{
+        font-size: 7rem;
+      }
+    }
+
+    h2{
+      font-size: 3rem;
+    }
+  }
+}
+
+@include media-xxl{
+  .home__name{
+    padding-top: 30vh;
+
+    &-name{
+      font-size: 8rem;
+
+      &__last{
+        font-size: 9rem;
+      }
+    }
+
+    h2{
+      font-size: 3.8rem;
+    }
+  }
+}

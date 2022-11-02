@@ -60,7 +60,6 @@
     color: set-text-color($secondary-color);
     @include transition-ease;
     @include flex(center, center,row);  
-   
     margin:0 .6rem;
     i{
      

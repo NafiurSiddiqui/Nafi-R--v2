@@ -1,10 +1,16 @@
 .about {
 	&__bio {
 		margin: 1rem;
-		@include flex(center, center, row);
+		@include flex(center, center, column);
+
 		&-container {
 			width: 80%;
-			text-align: center;
+			text-align: left;
+
+			.text-greetings {
+				display: block;
+				margin-bottom: 1rem;
+			}
 		}
 
 		h2 {
@@ -13,11 +19,11 @@
 
 		p {
 			line-height: 1.6rem;
+			font-size: 1.2rem;
 		}
 	}
 
 	&__work-history {
-
 		text-align: center;
 		padding: 1rem;
 		@include flex(center, center, column);
@@ -30,6 +36,8 @@
 				margin: 1rem 0;
 				padding: 1rem 1rem 4rem 1rem;
 				border-radius: 8px;
+				z-index: 6;
+				position: relative;
 				h2,
 				h3 {
 					margin: 0.5rem 0;
@@ -54,5 +62,3 @@
 		}
 	}
 }
-
-

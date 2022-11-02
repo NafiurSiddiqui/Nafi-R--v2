@@ -1,15 +1,7 @@
 .contact {
-  // height: 100%;
   padding-top: 20vh;
   overflow: hidden;
   @include flex(center, center, column);
-  // background: linear-gradient(
-  //     to right,
-  //     rgba($primary-color, 0.9),
-  //     rgba($primary-color, 0.3)
-  //   ),
-  //   url("../Images/model-1.jpg") center top;
-  // background-size: cover;
 
   h2 {
     font-size: 3rem;
@@ -28,7 +20,7 @@
   }
 
   .social-icons {
-    // position: initial;
+  
     margin-top: 2rem;
   }
 }

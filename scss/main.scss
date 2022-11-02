@@ -29,19 +29,19 @@ header {
 }
 
 main {
-	// height: 100%;
 	width: 100%;
+  
+}
 
-	.social-icons {
-		bottom: 1rem;
+.social-icons {
+	bottom: 1rem;
 
-		a {
-			padding: 0.4rem;
-			@include transition-ease;
+	a {
+		padding: 0.4rem;
+		@include transition-ease;
 
-			&:hover {
-				color: $secondary-color;
-			}
+		&:hover {
+			color: $secondary-color;
 		}
 	}
 }
@@ -54,6 +54,7 @@ footer {
 	position: fixed;
 	top: 50%;
 	width: 100%;
+	z-index: 1;
 	.social-icons {
 		@include flex(center, center, column);
 

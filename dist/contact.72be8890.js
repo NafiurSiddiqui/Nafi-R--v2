@@ -3,18 +3,18 @@ const hamburger = document.querySelector(".menu-btn__burger");
 const nav = document.querySelector(".nav");
 const menuNav = document.querySelector(".menu-nav");
 const navItems = document.querySelectorAll(".menu-nav__item");
-//now we create a var that prevent menu from showing up
+const header = document.getElementsByTagName("header")[0];
+const menu = document.getElementsByTagName("main")[0];
+// console.log(menu);
 let showMenu = false;
-//then  add an event listener
 menuBtn.addEventListener("click", toggleMenu);
 function toggleMenu() {
-    //if show menu is false or not shown
     if (!showMenu) {
-        hamburger.classList.add("open"); //classList is a class added to any element and also returns the class of the element
+        hamburger.classList.add("open");
         nav.classList.add("open");
         menuNav.classList.add("open");
-        navItems.forEach((item)=>item.classList.add("open")); //this gonna pull one item out each time
-        showMenu = true; //here we created a class name open
+        navItems.forEach((item)=>item.classList.add("open")); //this gonna sequentially pull out one item
+        showMenu = true;
     } else {
         hamburger.classList.remove("open");
         nav.classList.remove("open");
@@ -23,5 +23,17 @@ function toggleMenu() {
         showMenu = false;
     }
 }
+const observer = new IntersectionObserver((entries)=>{
+    entries.forEach((entry)=>{
+        // if(entry.isIntersecting){
+        //     console.log('menu');
+        // }
+        console.log(entry);
+    });
+}, {
+    rootMargin: "200px 0px 0px 0px",
+    threshold: 0.5
+});
+observer.observe(nav);
 
 //# sourceMappingURL=contact.72be8890.js.map

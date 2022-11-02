@@ -1,142 +1,138 @@
 .projects {
-  
-  padding: 2rem 0;
-  text-align: center;
- 
+	padding: 2rem 0;
+	text-align: center;
 
-  &__items {
-    width: 70vw;
-    margin: 2rem auto 0 auto;
-    display: grid;
-    grid-gap: 2rem;
-  }
+	&__items {
+		width: 70vw;
+		margin: 2rem auto 0 auto;
+		display: grid;
+		grid-gap: 2rem;
+	}
 
-  &__item {
-    position: relative;
-    border-bottom: 5px solid $secondary-color;
-    overflow: hidden;
-    cursor: pointer;
-    border-radius:0.2rem;
-    img {
-      width: 100%;
-      opacity: 0.8;
-      height: 98%;
-    }
+	&__item {
+		position: relative;
+		border-bottom: 5px solid $secondary-color;
+		overflow: hidden;
+		cursor: pointer;
+		border-radius: 0.2rem;
+		img {
+			width: 100%;
+			opacity: 0.8;
+			height: 98%;
+		}
 
-    &::after {
-      content: "";
-      position: absolute;
-      top: 100%;
-      left: 0;
-      height: 100%;
-      width: 100%;
-      background: $secondary-color;
-      opacity: 1;
-      @include transition-ease;
-    }
+		&::after {
+			content: '';
+			position: absolute;
+			top: 100%;
+			left: 0;
+			height: 100%;
+			width: 100%;
+			background: $secondary-color;
+			opacity: 1;
+			@include transition-ease;
+		}
 
-    &:hover {
-      &::after {
-        top: 0;
-        opacity: 0.9;
-      }
-      .projects__btn {
-        opacity: 1;
-      }
-    }
-  }
+		&:hover {
+			&::after {
+				top: 0;
+				opacity: 0.9;
+			}
+			.projects__btn {
+				opacity: 1;
+			}
+		}
+	}
 
-  &__btns {
-    position: absolute;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    z-index: 1;
-    @include flex(center, center, row);
-  }
+	&__btns {
+		position: absolute;
+		top: 0;
+		height: 100%;
+		width: 100%;
+		z-index: 1;
+		@include flex(center, center, row);
+	}
 
-  &__btn {
-    opacity: 0;
-    font-size: 2.8rem;
-    color: set-text-color($secondary-color);
-    @include transition-ease;
-    @include flex(center, center,row);  
-    margin:0 .6rem;
-    i{
-     
-      width: 5rem;
-      height: 5rem;
-     @include flex(center, center,row);   
-      border-radius: 50%;
+	&__btn {
+		opacity: 0;
+		font-size: 2.8rem;
+		color: set-text-color($secondary-color);
+		@include transition-ease;
+		@include flex(center, center, row);
+		margin: 0 0.6rem;
+		i {
+			width: 5rem;
+			height: 5rem;
+			@include flex(center, center, row);
+			border-radius: 50%;
 
-      &:hover{
-        box-shadow: 1px 2px 4px #834358, -1px -1px 4px rgb(213, 174, 174);
-      }
+			&:hover {
+				box-shadow: 1px 2px 4px #834358, -1px -1px 4px rgb(213, 174, 174);
+			}
 
-      &.inProgress:hover{
-        box-shadow: none;
-      }
-    }
-    
-    &:hover {
-      color: set-text-color(set-text-color($secondary-color));
-    }
-  }
+			&.inProgress:hover {
+				box-shadow: none;
+			}
+		}
 
-  .in-progress-text{
-    font-size:1.2rem;
-  }
+		&:hover {
+			color: set-text-color(set-text-color($secondary-color));
+		}
+	}
 
-  .social-icons {
-    display: flex;
-    flex-direction: column;
-  }
+	.in-progress-text {
+		font-size: 1.2rem;
+	}
 
-  footer {
-    transform: rotate(90deg) translate(-3rem, -5rem);
-  }
+	.social-icons {
+		display: flex;
+		flex-direction: column;
+	}
+
+	footer {
+		transform: rotate(90deg) translate(-3rem, -5rem);
+	}
 }
 
-@include media-xl{
-  .projects{
-    padding: 3rem 0;
+@include media-xl {
+	.projects {
+		padding: 3rem 0;
 
-    .text-secondary{
-      margin-bottom: 4rem;
-    }
-    &__btn{
-      font-size:3.8rem;
-      margin:0 1.5rem;
+		.text-secondary {
+			margin-bottom: 4rem;
+		}
+		&__btn {
+			font-size: 3.8rem;
+			margin: 0 1.5rem;
 
-      i{
-        width: 7rem;
-        height: 7rem;
-      }
-    }
+			i {
+				width: 7rem;
+				height: 7rem;
+			}
+		}
 
-    .in-progress-text{
-      font-size: 1.7rem;
-    }
-  }
+		.in-progress-text {
+			font-size: 1.7rem;
+		}
+	}
 }
 
-@include media-xxl{
-  .projects{
-    padding: 4rem 0;
-    
-   
-    &__btn{
-      font-size:5rem;
-      margin:0 1.5rem;
+@include media-xxl {
+	.projects {
+		padding: 4rem 0;
 
-      i{
-        width: 9rem;
-        height: 9rem;
-      }
-    }
+		&__btn {
+			font-size: 5rem;
+			margin: 0 1.5rem;
 
-    .in-progress-text{
-      font-size: 2.5rem;
-    }
-  }
+			i {
+				width: 9rem;
+				height: 9rem;
+			}
+		}
+
+		.in-progress-text {
+			font-size: 2.5rem;
+		}
+	}
 }

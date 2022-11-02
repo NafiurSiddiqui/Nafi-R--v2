@@ -46,7 +46,7 @@ main {
 }
 
 footer {
-	background-color: rgba(8, 8, 15, 0.990);
+	background-color: rgba(8, 8, 15, 0.99);
 	bottom: 0;
 	position: fixed;
 	width: 100%;
@@ -54,22 +54,18 @@ footer {
 	box-shadow: 0 -2px 4px #040406;
 	padding: 1.3rem 1rem;
 	color: set-text-color($primary-color);
-	
+
 	.social-icons {
 		@include flex(space-around, center, row);
-		// order:2;
+
 		width: 100vw;
 		a {
 			margin: 0.3rem 0;
 		}
 	}
 
-	i{
-		// font-size: 1.6rem !important;
-	}
-
 	.copyright {
-		order:1;
+		order: 1;
 		font-size: 0.8rem;
 		display: none;
 	}
@@ -82,9 +78,7 @@ footer {
 		font-size: 1rem;
 		padding: 1rem;
 		color: set-text-color($primary-color);
-		// position: fixed;
-		// top: 50%;
-		bottom:10%;
+		bottom: 10%;
 		width: 100%;
 		z-index: 1;
 		.social-icons {
@@ -100,52 +94,42 @@ footer {
 
 		.copyright {
 			transform: rotate(90deg) translate(-3rem, 2rem);
-		
-			// bottom: -2rem;
-			// position: relative;
 			position: absolute;
 			bottom: 4rem;
 			right: -4rem;
 			font-size: 1rem;
-			display:block;
+			display: block;
 		}
 	}
-
 }
 
-@include media-xl{
-
-
+@include media-xl {
 	main {
-		@include flex(center,center,column);
-
-		
+		@include flex(center, center, column);
 	}
-		footer{
-			.social-icons{
-				left: 3rem;
-				font-size: 1.3rem;
-			}
+	footer {
+		.social-icons {
+			left: 3rem;
+			font-size: 1.3rem;
+		}
 
-			.copyright{
-				right:-3.8rem;
-				font-size: 1.3rem;
-			}
+		.copyright {
+			right: -3.8rem;
+			font-size: 1.3rem;
 		}
 	}
+}
 
-@include media-xxl{
-	footer{
-		.social-icons{
+@include media-xxl {
+	footer {
+		.social-icons {
 			left: 4rem;
 			font-size: 1.7rem;
 		}
 
-		.copyright{
-			right:-4rem;
+		.copyright {
+			right: -4rem;
 			font-size: 1.7rem;
 		}
 	}
 }
-
-

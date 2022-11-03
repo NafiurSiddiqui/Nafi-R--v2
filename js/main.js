@@ -3,10 +3,7 @@ const hamburger = document.querySelector('.menu-btn__burger');
 const nav = document.querySelector('.nav');
 const menuNav = document.querySelector('.menu-nav');
 const navItems = document.querySelectorAll('.menu-nav__item'); 
-const header = document.getElementsByTagName('header')[0];
-const menu = document.getElementsByTagName('main')[0];
 
-// console.log(menu);
 
 
 let showMenu = false;
@@ -33,17 +30,3 @@ function toggleMenu() {
     }
 }
 
-const observer = new IntersectionObserver((entries)=>{
-    entries.forEach(entry=>{
-        // if(entry.isIntersecting){
-        //     console.log('menu');
-        // }
-        console.log(entry);
-
-    })
-},{
-    rootMargin:'200px 0px 0px 0px',
-    threshold:0.5
-});
-
-observer.observe(nav);

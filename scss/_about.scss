@@ -63,67 +63,66 @@
 }
 
 @include media-small-lg {
-	.about__work-history__tech-cards{
-		width:60vw;
+	.about__work-history__tech-cards {
+		width: 60vw;
 
-		&__card{
+		&__card {
 			z-index: 6;
 		}
 	}
 
-	.about__bio-container{
-		width:80% ;
+	.about__bio-container {
+		width: 80%;
 	}
 }
 
-@include media-xl{
-
-	.about__bio{
+@include media-xl {
+	.about__bio {
 		width: 60vw;
 
-		p{
+		p {
 			font-size: 1.4rem;
 			line-height: 1.8rem;
 		}
 	}
-	.about__work-history__tech-cards{
-		width:40vw;
+	.about__work-history__tech-cards {
+		width: 40vw;
 
-		&__card{
+		&__card {
 			margin: 2rem 0;
 			z-index: 6;
 			font-size: 1.3rem;
 
-			p{
-				line-height:1.6rem ;
+			p {
+				line-height: 1.6rem;
 			}
 		}
 	}
 
-	.about__bio-container{
-		width:80% ;
+	.about__bio-container {
+		width: 80%;
 	}
 }
 
-@include media-xxl{
-	.about__bio{
+@include media-xxl {
+	.about__bio {
 		width: 60vw;
 
-		p{
+		p {
 			font-size: 1.6rem;
 			line-height: 2rem;
 		}
 	}
-	.about__work-history__tech-cards{
-		width:40vw;
+	.about__work-history__tech-cards {
+		width: 40vw;
 
-		&__card{
+		&__card {
 			margin: 2.3rem 0;
 			z-index: 6;
 			font-size: 1.4rem;
 
-			p{
-				line-height:1.9rem ;
+			p {
+				line-height: 1.9rem;
 			}
 		}
 	}

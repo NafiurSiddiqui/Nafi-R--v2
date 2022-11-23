@@ -51,7 +51,7 @@ footer {
 	box-shadow: 0 -2px 4px #040406;
 	padding: 1.3rem 1rem;
 	color: set-text-color($primary-color);
-
+	z-index: 2;
 	.social-icons {
 		@include flex(space-around, center, row);
 
@@ -78,6 +78,7 @@ footer {
 		bottom: 10%;
 		width: 100%;
 		z-index: 1;
+		box-shadow: none;
 		.social-icons {
 			@include flex(center, center, column);
 			bottom: 1rem;

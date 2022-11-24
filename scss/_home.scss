@@ -6,13 +6,13 @@
 	overflow: hidden;
 	align-items: center;
 	text-align: center;
-
+	@include flex(center, center, column);
 	&-name {
 		font-size: 4.5rem;
 		padding-bottom: 1rem;
 		margin-bottom: 2rem;
 		border-bottom: 2px solid set-text-color($primary-color);
-
+		width: 80%;
 		&__last {
 			color: $secondary-color;
 			font-weight: 700;

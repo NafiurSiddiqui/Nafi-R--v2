@@ -139,14 +139,24 @@
 	.contact__list {
 		grid-template-columns: repeat(2, 1fr);
 	}
-
-	.footer {
-	}
 }
 
 @include media-lg {
 	.contact__list {
 		grid-template-columns: repeat(3, 1fr);
+	}
+
+	.projects__btn {
+		font-size: 4.5rem;
+
+		i {
+			width: 7rem;
+			height: 7rem;
+		}
+	}
+
+	.projects__btns-wrapper_heading {
+		font-size: 1.4rem;
 	}
 }
 
@@ -159,5 +169,14 @@
 
 	.projects__item-heading {
 		font-size: 1.5rem;
+	}
+
+	.projects__btn {
+		font-size: 5.5rem;
+
+		i {
+			width: 8rem;
+			height: 8rem;
+		}
 	}
 }

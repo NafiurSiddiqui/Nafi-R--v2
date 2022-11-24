@@ -10,64 +10,61 @@ $primary-color: #020202;
 $secondary-color: #fa777d;
 
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 }
 
 @mixin transition-ease {
-  transition: all 0.4s ease-in-out;
+	transition: all 0.3s ease-in-out;
 }
 
-@function set-text-color($color) { 
-
-  @if (lightness($color) > 40%) {
-    @return rgb(27, 26, 26);
-  } @else {
-    @return rgb(235, 234, 234);
-  }
+@function set-text-color($color) {
+	@if (lightness($color) > 40%) {
+		@return rgb(27, 26, 26);
+	} @else {
+		@return rgb(235, 234, 234);
+	}
 }
 
 //DirectionJC = for justify-content, directionAT = for align-items, flexType = row/ column
 
-@mixin flex($directionJC, $directionAT, $flexType){
-  display: flex;
-  justify-content: $directionJC;
-  align-items: $directionAT;
-  flex-direction: $flexType;
-
+@mixin flex($directionJC, $directionAT, $flexType) {
+	display: flex;
+	justify-content: $directionJC;
+	align-items: $directionAT;
+	flex-direction: $flexType;
 }
 
-@mixin media-small-md{
-  @media screen and (min-width: 450px) {
-    @content;
-  }
+@mixin media-small-md {
+	@media screen and (min-width: 450px) {
+		@content;
+	}
 }
 
-@mixin media-small-lg{
-  @media screen and (min-width: 600px) {
-    @content;
-  }
+@mixin media-small-lg {
+	@media screen and (min-width: 600px) {
+		@content;
+	}
 }
 @mixin media-md {
-  @media screen and (min-width: 768px) {
-    @content;
-  }
+	@media screen and (min-width: 768px) {
+		@content;
+	}
 }
 @mixin media-lg {
-  @media screen and (min-width: 1024px) {
-    @content;
-  }
+	@media screen and (min-width: 1024px) {
+		@content;
+	}
 }
 @mixin media-xl {
-  @media screen and (min-width: 1600px) {
-    @content;
-  }
+	@media screen and (min-width: 1600px) {
+		@content;
+	}
 }
 
 @mixin media-xxl {
-  @media screen and (min-width: 2200px) {
-    @content;
-  }
+	@media screen and (min-width: 2200px) {
+		@content;
+	}
 }
-

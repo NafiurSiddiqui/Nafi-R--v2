@@ -38,6 +38,7 @@ main {
 
 		&:hover {
 			color: $secondary-color;
+			transform: scale(1.2);
 		}
 	}
 }

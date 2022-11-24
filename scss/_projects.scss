@@ -1,3 +1,7 @@
+@mixin setBorder {
+	border: 2px solid rgb(37, 37, 37);
+}
+
 .projects {
 	padding: 2rem 0 8rem 0;
 	text-align: center;
@@ -19,9 +23,13 @@
 		border-bottom: 5px solid $secondary-color;
 		overflow: hidden;
 		border-radius: 0.2rem;
+		@include setBorder();
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
 
 		&-heading {
-			margin-bottom: 2rem;
+			margin: 0.8rem 0 2rem 0;
 
 			&-highlighted {
 				font-weight: bold;
@@ -59,13 +67,26 @@
 		@include transition-ease;
 		@include flex(center, center, row);
 		margin: 0 0.6rem;
+
+		&:active {
+			i {
+				box-shadow: 1px 4px 5px #dacdcd, -1px -1px 4px #fff;
+				background: linear-gradient(14deg, #b4385f 30%, #ff0044f2 100%);
+			}
+		}
 		i {
 			width: 6rem;
 			height: 6rem;
 			@include flex(center, center, row);
 			border-radius: 50%;
 			box-shadow: 1px 2px 4px #470b1f, -1px -1px 4px #d5aeae;
-			background-color: #cc5367;
+			background: rgb(173, 52, 90);
+			background: linear-gradient(
+				14deg,
+				rgb(74, 9, 30) 30%,
+				rgba(207, 20, 70, 0.946) 100%
+			);
+
 			color: set-text-color(set-text-color($secondary-color));
 
 			&.inProgress {

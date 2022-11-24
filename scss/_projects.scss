@@ -1,10 +1,14 @@
+@mixin setBorder {
+	border: 2px solid rgb(37, 37, 37);
+}
+
 .projects {
 	padding: 2rem 0 8rem 0;
 	text-align: center;
 
 	.text-secondary {
 		color: $secondary-color;
-		font-size:2rem;
+		font-size: 2rem;
 	}
 
 	&__items {
@@ -18,75 +22,83 @@
 		position: relative;
 		border-bottom: 5px solid $secondary-color;
 		overflow: hidden;
-		cursor: pointer;
 		border-radius: 0.2rem;
+		@include setBorder();
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+
+		&-heading {
+			margin: 0.8rem 0 2rem 0;
+
+			&-highlighted {
+				font-weight: bold;
+				color: rgb(241, 96, 120);
+			}
+		}
 		img {
 			width: 100%;
-			opacity: 0.8;
+			opacity: 0.4;
 			height: 98%;
-		}
-
-		&::after {
-			content: '';
-			position: absolute;
-			top: 100%;
-			left: 0;
-			height: 100%;
-			width: 100%;
-			background: $secondary-color;
-			opacity: 1;
-			@include transition-ease;
-		}
-
-		&:hover {
-			&::after {
-				top: 0;
-				opacity: 0.9;
-			}
-			.projects__btn {
-				opacity: 1;
-			}
 		}
 	}
 
 	&__btns {
 		position: absolute;
-		top: 0;
+		top: 8%;
 		height: 100%;
 		width: 100%;
 		z-index: 1;
-		@include flex(center, center, row);
+		@include flex(space-evenly, center, row);
+
+		&-wrapper {
+			@include flex(center, center, column);
+			&_heading {
+				margin-bottom: 1.8rem;
+				letter-spacing: 1px;
+			}
+		}
 	}
 
 	&__btn {
-		opacity: 0;
-		font-size: 2.8rem;
+		opacity: 1;
+		font-size: 4rem;
 		color: set-text-color($secondary-color);
 		@include transition-ease;
 		@include flex(center, center, row);
 		margin: 0 0.6rem;
-		i {
-			width: 5rem;
-			height: 5rem;
-			@include flex(center, center, row);
-			border-radius: 50%;
 
-			&:hover {
-				box-shadow: 1px 2px 4px #834358, -1px -1px 4px rgb(213, 174, 174);
-			}
-
-			&.inProgress:hover {
-				box-shadow: none;
+		&:active {
+			i {
+				box-shadow: 1px 4px 5px #dacdcd, -1px -1px 4px #fff;
+				background: linear-gradient(14deg, #b4385f 30%, #ff0044f2 100%);
 			}
 		}
+		i {
+			width: 6rem;
+			height: 6rem;
+			@include flex(center, center, row);
+			border-radius: 50%;
+			box-shadow: 1px 2px 4px #470b1f, -1px -1px 4px #d5aeae;
+			background: rgb(173, 52, 90);
+			background: linear-gradient(
+				14deg,
+				rgb(74, 9, 30) 30%,
+				rgba(207, 20, 70, 0.946) 100%
+			);
 
-		&:hover {
 			color: set-text-color(set-text-color($secondary-color));
+
+			&.inProgress {
+				box-shadow: none;
+				background-color: none !important;
+			}
 		}
 	}
 
 	.in-progress-text {
 		font-size: 1.2rem;
+		color: white;
 	}
 
 	.social-icons {

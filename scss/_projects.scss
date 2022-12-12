@@ -39,7 +39,8 @@
 		img {
 			width: 100%;
 			opacity: 0.4;
-			height: 98%;
+			// height: 98%;
+			object-fit: fill;
 		}
 	}
 

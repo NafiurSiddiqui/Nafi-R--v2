@@ -62,6 +62,19 @@
 	}
 }
 
+.tech-stack {
+	&-container {
+		@include flex(center, center, row);
+	}
+	border: none;
+	width: 40%;
+	li {
+		list-style-type: square;
+		padding: 0.4rem 0;
+		font-size: 1.1rem;
+	}
+}
+
 @include media-small-lg {
 	.about__work-history__tech-cards {
 		width: 60vw;

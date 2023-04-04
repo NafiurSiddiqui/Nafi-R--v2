@@ -37,14 +37,14 @@
 				padding: 1rem 1rem 4rem 1rem;
 				border-radius: 8px;
 				position: relative;
-				// @include flex(space-between, center, row);
-				h2,
-				h3 {
-					margin: 0.5rem 0;
-				}
 
 				h2 {
 					font-weight: bold;
+					margin: 0.5rem 0;
+				}
+
+				h3 {
+					margin: 1rem 0;
 				}
 				h6 {
 					margin: 0.3rem 0;
@@ -72,7 +72,7 @@
 		&-card {
 			height: 6rem;
 			padding: 1rem 0;
-			margin: 2rem 0.4rem;
+			margin: 1rem 0.4rem;
 		}
 		&-container {
 			@include flex(center, center, row);

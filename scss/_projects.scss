@@ -39,7 +39,7 @@
 		img {
 			width: 100%;
 			opacity: 0.4;
-			// height: 98%;
+
 			object-fit: fill;
 		}
 	}
@@ -69,30 +69,17 @@
 		@include flex(center, center, row);
 		margin: 0 0.6rem;
 
-		&:active {
-			i {
-				box-shadow: 1px 4px 5px #dacdcd, -1px -1px 4px #fff;
-				background: linear-gradient(14deg, #b4385f 30%, #ff0044f2 100%);
-			}
-		}
 		i {
 			width: 6rem;
 			height: 6rem;
 			@include flex(center, center, row);
 			border-radius: 50%;
-			box-shadow: 1px 2px 4px #470b1f, -1px -1px 4px #d5aeae;
-			background: rgb(173, 52, 90);
-			background: linear-gradient(
-				14deg,
-				rgb(74, 9, 30) 30%,
-				rgba(207, 20, 70, 0.946) 100%
-			);
-
+			background: rgb(23, 14, 17);
 			color: set-text-color(set-text-color($secondary-color));
 
 			&.inProgress {
 				box-shadow: none;
-				background: rgb(167, 46, 84);
+				background: #170e11;
 			}
 		}
 	}

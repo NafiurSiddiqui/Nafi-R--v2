@@ -60,13 +60,8 @@
 				left: 0;
 				height: 100%;
 				width: 100%;
-				background: rgb(173, 52, 90);
-				background: linear-gradient(
-					14deg,
-					rgb(139, 73, 94) 30%,
-					rgba(207, 20, 70, 0.946) 100%
-				);
-
+				background: #2d1e1f;
+				opacity: 0.8;
 				@include transition-ease;
 				z-index: 1;
 				border-radius: 0.2rem;
@@ -112,15 +107,12 @@
 				height: 5rem;
 				@include flex(center, center, row);
 				border-radius: 50%;
-				background-color: #695a5d;
-				color: rgb(49, 15, 15);
-				box-shadow: 1px 2px 4px #7f183a, -1px -1px 4px #7b4040;
+
 				@include transition-ease;
 
 				&:hover {
-					box-shadow: 1px 2px 4px #d0d0d0, -1px -1px 4px #300c0c;
-					background-color: #352c2e;
-					color: #d2cfcb;
+					background-color: #e5e2e2;
+					color: #1d1d1d;
 				}
 
 				&.inProgress {

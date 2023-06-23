@@ -1,5 +1,7 @@
 .about {
-	&__bio {
+	&-container {
+	}
+	&-bio {
 		margin: 1rem;
 		@include flex(center, center, column);
 
@@ -13,7 +15,7 @@
 			}
 		}
 
-		h2 {
+		h1 {
 			margin-bottom: 1.2rem;
 		}
 
@@ -23,13 +25,15 @@
 		}
 	}
 
-	&__work-history {
+	&-tech {
 		text-align: center;
-		padding: 1rem;
-		@include flex(center, center, column);
+		// padding: 1rem;
+		// @include flex(center, center, column);
+		@include borderTest(white);
 
-		&__tech-cards {
-			width: 80vw;
+		&-wrapper {
+			// width: 80vw;
+			// @include flex(null, center, row);
 
 			&__card {
 				border: 1px solid aliceblue;
@@ -63,6 +67,10 @@
 					padding-top: 1.2rem;
 				}
 			}
+		}
+
+		&-container {
+			display: flex;
 		}
 	}
 }

@@ -15,6 +15,10 @@ $secondary-color: #fa777d;
 	padding: 0;
 }
 
+@mixin borderTest($color) {
+	border: 1px solid $color;
+}
+
 @mixin transition-ease {
 	transition: all 0.3s ease-in-out;
 }

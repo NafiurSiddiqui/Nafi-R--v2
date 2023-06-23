@@ -1,12 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
 
 .home-content {
-	height: 100%;
-	padding-top: 20vh;
-	overflow: hidden;
-	align-items: center;
-	text-align: center;
-	@include flex(center, center, column);
+	&-wrapper {
+		height: 100vh;
+		overflow: hidden;
+		align-items: center;
+		text-align: center;
+		@include flex(null, center, column);
+		padding-top: 8rem;
+	}
+
 	&-name {
 		font-size: 4.5rem;
 		padding-bottom: 1rem;

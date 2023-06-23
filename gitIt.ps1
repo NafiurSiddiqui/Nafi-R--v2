@@ -1,10 +1,13 @@
-function gitIt{
-
+function gitIt {
+   if ($args.Count -eq 0) {
+      $message = Read-Host "Enter a commit message"
+   } else {
+      $message = $args[0]
+   }
    git status
    git add -A
-   git commit -m "$arg[0]"
+   git commit -m "$message"
    git push
 }
 
-
-gitIt "default powerShell commit" 
+gitIt $args[0]

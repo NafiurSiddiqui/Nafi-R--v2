@@ -1,9 +1,6 @@
-@mixin setBorder {
-	border: 2px solid rgb(37, 37, 37);
-}
-
-.projects {
-	padding: 2rem 0 8rem 0;
+.project {
+	// padding: 2rem 0 8rem 0;
+	padding: 2rem 0.8rem;
 	text-align: center;
 
 	.text-secondary {
@@ -11,19 +8,21 @@
 		font-size: 2rem;
 	}
 
-	&__items {
-		width: 70vw;
+	&-items {
+		// width: 70vw;
 		margin: 2rem auto 0 auto;
 		display: grid;
 		grid-gap: 2rem;
 	}
 
-	&__item {
+	&-item {
 		position: relative;
-		border-bottom: 5px solid $secondary-color;
+		border-bottom: 5px solid white;
 		overflow: hidden;
+		height: 42rem;
 		border-radius: 0.2rem;
-		@include setBorder();
+
+		@include borderTest(white);
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
@@ -36,21 +35,23 @@
 				color: rgb(241, 96, 120);
 			}
 		}
+
+		&-img-container {
+			height: 15rem;
+		}
 		img {
 			width: 100%;
-			opacity: 0.4;
-
-			object-fit: fill;
+			height: 100%;
+			object-fit: cover;
+			object-position: top;
 		}
 	}
 
-	&__btns {
-		position: absolute;
-		top: 8%;
-		height: 100%;
-		width: 100%;
-		z-index: 1;
-		@include flex(space-evenly, center, row);
+	&-btns {
+		height: 6rem;
+		background-color: #2f2f2f;
+
+		@include flex(space-between, center, row);
 
 		&-wrapper {
 			@include flex(center, center, column);
@@ -61,25 +62,32 @@
 		}
 	}
 
-	&__btn {
-		opacity: 1;
-		font-size: 4rem;
+	&-btn {
+		font-size: 2rem;
 		color: set-text-color($secondary-color);
-		@include transition-ease;
-		@include flex(center, center, row);
 		margin: 0 0.6rem;
-
-		i {
-			width: 6rem;
-			height: 6rem;
+		background-color: white;
+		padding: 0.8rem 1rem;
+		&-icon {
+			opacity: 1;
+			font-size: 4rem;
+			color: set-text-color($secondary-color);
+			@include transition-ease;
 			@include flex(center, center, row);
-			border-radius: 50%;
-			background: rgb(23, 14, 17);
-			color: set-text-color(set-text-color($secondary-color));
+			margin: 0 0.6rem;
 
-			&.inProgress {
-				box-shadow: none;
-				background: #170e11;
+			i {
+				width: 5rem;
+				height: 5rem;
+				@include flex(center, center, row);
+				// border-radius: 50%;
+
+				color: set-text-color(set-text-color($secondary-color));
+
+				// &.inProgress {
+				// 	box-shadow: none;
+				// 	background: #170e11;
+				// }
 			}
 		}
 	}

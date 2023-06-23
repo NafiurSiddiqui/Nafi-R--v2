@@ -27,8 +27,7 @@
 
 	&-tech {
 		text-align: center;
-		// padding: 1rem;
-		// @include flex(center, center, column);
+
 		@include borderTest(white);
 
 		&-wrapper {

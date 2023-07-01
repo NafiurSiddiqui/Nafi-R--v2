@@ -1,11 +1,31 @@
 .project {
 	// padding: 2rem 0 8rem 0;
-	padding: 2rem 0.8rem;
+	padding: 2rem;
 	text-align: center;
 
 	.text-secondary {
 		color: $secondary-color;
 		font-size: 2rem;
+	}
+
+	&-tag-container {
+		// @include borderTest(white);
+		@include flex(center, center, row);
+		margin-top: 1rem;
+	}
+
+	&-tags-wrapper {
+		@include flex(space-between, center, row);
+		width: 80%;
+	}
+
+	&-tag {
+		background-color: rgb(244, 244, 244);
+		color: black;
+		font-weight: bold;
+		padding: 0.4rem 0.6rem;
+		font-size: 0.8rem;
+		border-radius: 0.2rem;
 	}
 
 	&-items {
@@ -19,21 +39,35 @@
 		position: relative;
 		border-bottom: 5px solid white;
 		overflow: hidden;
-		height: 42rem;
-		border-radius: 0.2rem;
+		min-height: 36rem;
+		height: fit-content;
+		border-radius: 1rem;
 
 		@include borderTest(white);
 		display: flex;
 		flex-direction: column;
-		justify-content: space-between;
+
+		&-heading-wrapper {
+			margin: 0.8rem 0;
+			padding: 0 1rem;
+			// text-align: left;
+		}
 
 		&-heading {
-			margin: 0.8rem 0 2rem 0;
+			// text-align: center;
+			margin-bottom: 0.4rem;
+			font-weight: bold;
+			color: $secondary-color;
+			font-size: 1.6rem;
 
-			&-highlighted {
-				font-weight: bold;
-				color: rgb(241, 96, 120);
+			&__sub-heading {
+				font-style: italic;
 			}
+		}
+
+		&-description {
+			padding: 0 1rem;
+			text-align: center;
 		}
 
 		&-img-container {
@@ -48,9 +82,10 @@
 	}
 
 	&-btns {
-		height: 6rem;
 		background-color: #2f2f2f;
-
+		position: absolute;
+		bottom: 0;
+		width: 100%;
 		@include flex(space-between, center, row);
 
 		&-wrapper {
@@ -63,14 +98,15 @@
 	}
 
 	&-btn {
-		font-size: 2rem;
+		font-size: 1.2rem;
 		color: set-text-color($secondary-color);
 		margin: 0 0.6rem;
+		border-radius: 0.2rem;
 		background-color: white;
 		padding: 0.8rem 1rem;
 		&-icon {
 			opacity: 1;
-			font-size: 4rem;
+			font-size: 3rem;
 			color: set-text-color($secondary-color);
 			@include transition-ease;
 			@include flex(center, center, row);
@@ -80,14 +116,7 @@
 				width: 5rem;
 				height: 5rem;
 				@include flex(center, center, row);
-				// border-radius: 50%;
-
 				color: set-text-color(set-text-color($secondary-color));
-
-				// &.inProgress {
-				// 	box-shadow: none;
-				// 	background: #170e11;
-				// }
 			}
 		}
 	}
